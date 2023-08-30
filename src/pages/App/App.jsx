@@ -18,12 +18,11 @@ export default function App() {
 
   return (
     <>
-      <BootstrapNavbar />
+      <BootstrapNavbar user={user} setUser={setUser}/>
       <Container>
         <Row>
           {user ? (
             <>
-              <NavBar user={user} setUser={setUser} />
               <Routes>
                 {/* Route components in here */}
                 <Route path="/orders/new" element={<NewOrderPage />} />
